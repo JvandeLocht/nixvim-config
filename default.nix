@@ -11,6 +11,8 @@ _:
     # Use <Space> as leader key
     globals.mapleader = " ";
 
+plugins.whakatime.enable = false;
+
     # Set 'vi' and 'vim' aliases to nixvim
     viAlias = true;
     vimAlias = true;
