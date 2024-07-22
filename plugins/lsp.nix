@@ -93,7 +93,10 @@
       jsonls.enable = true;
       lua-ls.enable = true;
       nginx-language-server.enable = true;
-      nixd.enable = true;
+      nixd = {
+        enable = true;
+        settings.formatting.command = [ "nixpkgs-fmt" ];
+      };
       pyright.enable = true;
       sqls.enable = true;
       terraformls.enable = true;
