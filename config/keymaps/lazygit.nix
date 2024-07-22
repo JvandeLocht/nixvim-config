@@ -5,7 +5,7 @@
     mode = "n";
     key = "<leader>gg";
 
-    action = "LazyGit";
+    action = "<cmd>LazyGit<CR>";
     options.desc = "Open LazyGit";
   }
 ]
