@@ -1,13 +1,13 @@
 {
   colorschemes = {
-    catppuccin = {
+    onedark = {
       enable = true;
 
       settings = {
-        flavour = "mocha";
+        # flavour = "mocha";
 
         # Needed to keep terminal transparency, if any
-        transparent_background = false;
+        transparent_background = true;
       };
     };
   };
