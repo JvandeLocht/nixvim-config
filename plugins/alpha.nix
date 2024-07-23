@@ -12,15 +12,14 @@ let
       position = "center";
     };
 
-    # Generated from https://www.asciiart.eu/text-to-ascii-art
-    # Font used: Graffiti
+    # Copied from https://www.asciiart.eu/space/telescopes
     val = [
-      "  ________  ____   ____.___   _____   "
-      " /  _____/  \\   \\ /   /|   | /     \\  "
-      "/   \\  ___   \\   Y   / |   |/  \\ /  \\ "
-      "\\    \\_\\  \\   \\     /  |   /    Y    \\"
-      " \\______  / /\\ \\___/   |___\\____|__  /"
-      "        \\/  \\/                     \\/ "
+      "       .-.      _______                             .  '  *   .  . '"
+      "      {}``; |==|_______D                              .  * * -+-    "
+      "      / ('        /|\\                             .    * .    '  *  "
+      "  (  /  |        / | \\                                * .  ' .  .   "
+      "akg\\(_)_]]      /  |  \\                            *   *  .   .     "
+      "                                                     '   *          "
     ];
   };
 
