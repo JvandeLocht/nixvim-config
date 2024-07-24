@@ -93,6 +93,7 @@
       jsonls.enable = true;
       lua-ls.enable = true;
       nginx-language-server.enable = true;
+      tinymist.enable = true;
       nixd = {
         enable = true;
         settings.formatting.command = [ "nixpkgs-fmt" ];
