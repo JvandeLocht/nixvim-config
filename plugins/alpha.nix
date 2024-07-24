@@ -155,19 +155,22 @@ in
       }
     ];
 
-    colorschemes.catppuccin.settings = {
-      # Enable catppuccin colors
-      # https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/alpha.lua
-      integrations.alpha = true;
+    colorschemes.catppuccin = {
+      enable = true;
+      settings = {
+        # Enable catppuccin colors
+        # https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/alpha.lua
+        integrations.alpha = true;
 
-      # Override default catppuccin header color
-      custom_highlights = ''
-        function(colors)
-          return {
-            AlphaHeader = { fg = colors.red },
-          }
-        end
-      '';
+        # Override default catppuccin header color
+        custom_highlights = ''
+          function(colors)
+            return {
+              AlphaHeader = { fg = colors.red },
+            }
+          end
+        '';
+      };
     };
 
     keymaps = [
