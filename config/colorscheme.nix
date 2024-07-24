@@ -1,6 +1,6 @@
 {
   colorschemes = {
-    onedark = {
+    gruvbox = {
       enable = true;
 
       settings = {

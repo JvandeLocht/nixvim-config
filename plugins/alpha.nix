@@ -155,8 +155,7 @@ in
       }
     ];
 
-    colorschemes.catppuccin = {
-      enable = true;
+    colorschemes.gruvbox = {
       settings = {
         # Enable catppuccin colors
         # https://github.com/catppuccin/nvim/blob/main/lua/catppuccin/groups/integrations/alpha.lua
