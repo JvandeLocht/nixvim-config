@@ -1,17 +1,17 @@
 { pkgs, ... }:
 
 let
-  version = "0.3.2";
+  commit = "7ae2b82cf334819494505b772745beb28705b12b";
 in
 pkgs.vimUtils.buildVimPlugin {
-  inherit version;
+  inherit commit;
 
   name = "typst-preview";
 
   src = pkgs.fetchFromGitHub {
     owner = "chomosuke";
     repo = "typst-preview.nvim";
-    rev = "v${version}";
-    hash = "sha256-33clHm4XRfbYKSYrofm1TEaUV2UCIFVqNAc6Js8sTzY=";
+    rev = "${commit}";
+    hash = "sha256-kJ6IfLSBmJMgEFuCy6fGtqSRBXjt2Aoxu2NW9iyzRLU=";
   };
 }

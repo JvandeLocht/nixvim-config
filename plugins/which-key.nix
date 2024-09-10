@@ -27,6 +27,7 @@
       "<leader>s".name = "${icons.Session} Session";
       "<leader>t".name = "${icons.Terminal} Terminal";
       "<leader>u".name = "${icons.Window} UI/UX";
+      "<leader>p".name = "${icons.Eye} Preview";
     };
   };
 

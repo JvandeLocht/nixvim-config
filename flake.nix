@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
 
     # Nix formatting pack
     # https://gerschtli.github.io/nix-formatter-pack/nix-formatter-pack-options.html
@@ -19,10 +20,11 @@
 
   outputs =
     { nixpkgs
+    , nixpkgs-stable
     , nixvim
     , nix-formatter-pack
     , ...
-    }:
+    } @ inputs:
     let
       forAllSystems = nixpkgs.lib.genAttrs [
         "aarch64-linux"
@@ -55,7 +57,7 @@
               module = ./.;
 
               extraSpecialArgs = specialArgs // {
-                inherit pkgs;
+                inherit pkgs inputs;
 
                 icons = import ./utils/_icons.nix;
               };

@@ -21,6 +21,7 @@
   DiagnosticWarn = "";
   Ellipsis = "…";
   Environment = "";
+  Eye = "";
   FileNew = "";
   FileModified = "";
   FileReadOnly = "";
