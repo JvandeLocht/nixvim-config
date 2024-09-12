@@ -31,5 +31,11 @@ in
       action = "<cmd>TypstPreviewToggle<CR>";
       options.desc = "Toggle Typst Preview";
     }
+    {
+      mode = "n";
+      key = "<leader>ps";
+      action = "<cmd>TypstPreviewSyncCursor<CR>";
+      options.desc = "Sync Cursor TypstPreview";
+    }
   ];
 }
