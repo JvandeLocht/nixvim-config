@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  commit = "7ae2b82cf334819494505b772745beb28705b12b";
+  commit = "0f43ed7fa661617751bfd0ca2f01ee13eba6569e";
 in
 pkgs.vimUtils.buildVimPlugin {
   inherit commit;
@@ -12,6 +12,6 @@ pkgs.vimUtils.buildVimPlugin {
     owner = "chomosuke";
     repo = "typst-preview.nvim";
     rev = "${commit}";
-    hash = "sha256-kJ6IfLSBmJMgEFuCy6fGtqSRBXjt2Aoxu2NW9iyzRLU=";
+    hash = "sha256-olO2hh2xU/tiuwMNKGuKU+Wa5taiTUOv9jlK2/99yvk";
   };
 }

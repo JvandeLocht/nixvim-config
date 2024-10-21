@@ -5,30 +5,75 @@
 {
   opts = {
     enable = true;
-    icons.group = "";
-    window.border = "single";
-
-    # Disable which-key when in neo-tree or telescope
-    disable.filetypes = [
-      "TelescopePrompt"
-      "neo-tree"
-      "neo-tree-popup"
-    ];
-
-    # Customize section names (prefixed mappings)
-    registrations = {
-      "<leader>b".name = "${icons.Tab} Buffers";
-      "<leader>bs".name = "${icons.Sort} Sort Buffers";
-      "<leader>d".name = "${icons.Debugger} Debugger";
-      "<leader>f".name = "${icons.Search} Find";
-      "<leader>g".name = "${icons.Git} Git";
-      "<leader>l".name = "${icons.ActiveLSP} Language Tools";
-      "<leader>m".name = " Markdown";
-      "<leader>s".name = "${icons.Session} Session";
-      "<leader>t".name = "${icons.Terminal} Terminal";
-      "<leader>u".name = "${icons.Window} UI/UX";
-      "<leader>p".name = "${icons.Eye} Preview";
+    settings = {
+      icons.group = "";
+      # window.border = "single";
+      # Disable which-key when in neo-tree or telescope
+      disable.filetypes = [
+        "TelescopePrompt"
+        "neo-tree"
+        "neo-tree-popup"
+      ];
+      # Customize section names (prefixed mappings)
+      spec = [
+        {
+          __unkeyed-1 = "<leader>b";
+          group = "Buffers";
+          icon = "${icons.Tab}";
+        }
+        {
+          __unkeyed-1 = "<leader>bs";
+          group = "Sort Buffers";
+          icon = "${icons.Sort}";
+        }
+        {
+          __unkeyed-1 = "<leader>d";
+          group = "Debugger";
+          icon = "${icons.Debugger}";
+        }
+        {
+          __unkeyed-1 = "<leader>f";
+          group = "Find";
+          icon = "${icons.Search}";
+        }
+        {
+          __unkeyed-1 = "<leader>g";
+          group = "Git";
+          icon = "${icons.Git}";
+        }
+        {
+          __unkeyed-1 = "<leader>l";
+          group = "Language Tools";
+          icon = "${icons.ActiveLSP}";
+        }
+        {
+          __unkeyed-1 = "<leader>m";
+          group = "Markdown";
+          icon = "";
+        }
+        {
+          __unkeyed-1 = "<leader>s";
+          group = "Session";
+          icon = "${icons.Session}";
+        }
+        {
+          __unkeyed-1 = "<leader>t";
+          group = "Terminal";
+          icon = "${icons.Terminal}";
+        }
+        {
+          __unkeyed-1 = "<leader>u";
+          group = "UI/UX";
+          icon = "${icons.Window}";
+        }
+        {
+          __unkeyed-1 = "<leader>p";
+          group = "Preview";
+          icon = "${icons.Eye}";
+        }
+      ];
     };
+
   };
 
   # Enable catppuccin colors
