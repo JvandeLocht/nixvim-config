@@ -95,18 +95,18 @@
       nginx_language_server.enable = true;
       tinymist = {
         enable = true;
-        extraOptions = {
-          offset_encoding = "utf-8";
-        };
+        # extraOptions = {
+        #   offset_encoding = "utf-8";
+        # };
         # settings = {
         #   offset_encoding = "utf-8";
         # };
       };
       nixd = {
         enable = true;
-        extraOptions = {
-          offset_encoding = "utf-8";
-        };
+        # extraOptions = {
+        #   offset_encoding = "utf-8";
+        # };
         settings.formatting.command = [ "nixpkgs-fmt" ];
       };
       pyright.enable = true;
