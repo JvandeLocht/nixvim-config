@@ -33,6 +33,18 @@
         "aarch64-darwin"
         "x86_64-darwin"
       ];
+
+      neovimOverlay = final: prev: {
+        neovim-unwrapped = prev.neovim-unwrapped.overrideAttrs (oldAttrs: {
+          version = "0.10.1";
+          src = final.fetchFromGitHub {
+            owner = "neovim";
+            repo = "neovim";
+            rev = "v0.10.1";
+            hash = "sha256-OsHIacgorYnB/dPbzl1b6rYUzQdhTtsJYLsFLJxregk=";
+          };
+        });
+      };
     in
     {
       formatter = forAllSystems (system:
@@ -47,9 +59,14 @@
         }
       );
 
+      overlays.default = neovimOverlay;
+
       packages = forAllSystems (system:
         let
-          pkgs = import nixpkgs { inherit system; };
+          pkgs = import nixpkgs {
+            inherit system;
+            overlays = [ neovimOverlay ];
+          };
           mkNixvim = specialArgs:
             nixvim.legacyPackages.${system}.makeNixvimWithModule {
               inherit pkgs;
@@ -64,7 +81,7 @@
             };
         in
         {
-          default = mkNixvim { };
+          default = mkNixvim { package = pkgs.neovim-unwrapped; };
           lite = mkNixvim { withLSP = false; };
         }
       );
